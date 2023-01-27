@@ -1,26 +1,30 @@
 # react-native-npm-test-library
 
-test
+practice publishing native module for RN project
+
+simplified from create-react-native-library basic template
 
 ## Installation
 
 ```sh
 npm install react-native-npm-test-library
+yarn add react-native-npm-test-library
 ```
 
 ## Usage
 
-```js
-import { NpmTestLibraryView } from "react-native-npm-test-library";
+```ts
+import React from 'react';
+import HelloView, { sayHello } from "react-native-npm-test-library";
 
-// ...
+export function HelloScreen () {
+  useEffect(() => {
+    sayHello();
+  }, []);
 
-<NpmTestLibraryView color="tomato" />
+  return <HelloView />
+}
 ```
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
 ## License
 
